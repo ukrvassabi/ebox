@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Google Email Box</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+</head>
+<body ng-app="ebox">
+
+	<ebox-spinner></ebox-spinner>
+	
+	<div class="container">
+	    <ui-view></ui-view>
+	</div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="{% static 'app.js' %}"></script>
+	<script type="text/javascript" src="{% static 'ebox.ctr.js' %}"></script>
+	<script type="text/javascript" src="{% static 'ebox.fac.js' %}"></script>
+	<script type="text/javascript" src="{% static 'ebox.dir.js' %}"></script>
+</body>
+</html>

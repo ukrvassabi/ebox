@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default m-top-50">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref="ebox">Ebox</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref="ebox">{{ ebox.user }}</a></li>
+        <li><a class="link" ng-click="ebox.logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="table-responsive">
+  <table class='table table-condensed table-striped'>
+    <thead>
+      <tr>
+        <th class="col-sm-7">Email</th>
+        <th class="col-sm-5">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="email in ebox.emails">
+        <td class="col-sm-7">
+        	<strong>{{  email.Subject }}</strong>
+        	<br>
+        	<br>
+        	{{ email.Message }}
+        </td>
+        <td class="col-sm-5 td-middle">
+          Date: {{ email.Date }}
+          <br>
+          From: {{ email.From }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
