@@ -4,7 +4,7 @@ Application allows to login with google account. After login user will see his/h
 
 #### How to run?
 
-* You should have preinstalled Docker and Docker compose.
+* You should have preinstalled Docker and [Docker compose](https://docs.docker.com/compose/install/)
 
 * Pull sources and in the project folder create .env file with next content:
 	```
