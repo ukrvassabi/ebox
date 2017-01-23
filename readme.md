@@ -19,9 +19,11 @@ Application allows to login with google account. After login user will see his/h
 	```
 
 * Run folowing commands:
-	`sudo docker-compose build`
-	`sudo docker-compose run web python manage.py migrate`
-	`sudo docker-compose up`
+	```
+	sudo docker-compose build
+	sudo docker-compose run db (Ctrl+C after successful start)
+	sudo docker-compose run web python manage.py migrate
+	sudo docker-compose up
 
 * Open `http://localhost:8000`
 * Login with your Google credentials.
